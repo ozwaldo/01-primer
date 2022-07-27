@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import { ComponenteUno } from './components/ComponenteUno';
+import { ComponenteDos } from './components/ComponenteDos';
+import { ComponenteTres } from './components/ComponenteTres';
 
 function App() {
+  const objeto = {
+    dato1: 1,
+    dato2: "OBJ datos2",
+    objeto2: {
+      dobj1: "Objeto dentro de Objeto uno",
+      dobj2: "Objeto dentro de Objeto dos"
+    }
+  };
+
+  const numero = 0;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-            <ComponenteUno></ComponenteUno>
-        </a>
-      </header>
+    <div className="App">     
+      <ComponenteTres uno={numero} dos="Propiedad2" tres={objeto}/>
+      <ComponenteUno></ComponenteUno>
+      <ComponenteDos></ComponenteDos>
     </div>
   );
 }

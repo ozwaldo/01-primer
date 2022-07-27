@@ -5,8 +5,8 @@ export const ComponenteTres = ({uno,dos,tres}) => {
     //console.log(propiedades)
 
   return (
-    <div>
-        <h2>ComponenteTres</h2>
+    <div className='componente'>
+        <h2>Componente Tres</h2>
         <ul>
             <li>Propiedad 1: {uno}</li>
             <li>Propiedad 2: {dos}</li>
@@ -20,11 +20,15 @@ export const ComponenteTres = ({uno,dos,tres}) => {
 }
 
 ComponenteTres.propTypes = {
-    uno:PropTypes.string,
-    dos:PropTypes.string,
+    uno:PropTypes.string.isRequired,
+    dos:PropTypes.string.isRequired,
     tres:PropTypes.shape({
         dato1:PropTypes.number,
         dato2:PropTypes.string
     })
-}
+};
+
+ComponenteTres.defaultProps = {
+    uno: "Default"
+};
 

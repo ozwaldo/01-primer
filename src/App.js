@@ -3,6 +3,7 @@ import './App.css';
 import { ComponenteUno } from './components/ComponenteUno';
 import { ComponenteDos } from './components/ComponenteDos';
 import { ComponenteTres } from './components/ComponenteTres';
+import { ComponenteCuatro } from './components/ComponenteCuatro';
 
 function App() {
   const objeto = {
@@ -17,8 +18,9 @@ function App() {
   const numero = 0;
 
   return (
-    <div className="App">     
-      <ComponenteTres uno={numero} dos="Propiedad2" tres={objeto}/>
+    <div className="App">    
+      <ComponenteCuatro /> 
+      <ComponenteTres uno="Hola" dos="Propiedad2" tres={objeto}/>
       <ComponenteUno></ComponenteUno>
       <ComponenteDos></ComponenteDos>
     </div>

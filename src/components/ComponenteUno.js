@@ -5,7 +5,7 @@ export const ComponenteUno = () => {
     
 
     return (
-        <div className='componenteuno'>
+        <div className='componente'>
             <h1>Componente Uno</h1>
         </div>
     )
